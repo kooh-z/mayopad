@@ -21,6 +21,7 @@ gem 'erb2haml'
 
 gem 'will_paginate',           '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
+gem "redcarpet", "~> 2.3.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

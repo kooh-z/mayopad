@@ -2,7 +2,7 @@
   = link_to gravatar_for(post.user, size: 50), post.user
   %span.user= link_to post.user.name, post.user
   %span.content
-    = post.content
+    = markdown post.content
     = image_tag post.picture.url if post.picture?
   %span.timestamp
     Posted #{time_ago_in_words(post.created_at)} ago.

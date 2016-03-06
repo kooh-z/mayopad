@@ -13,3 +13,6 @@
 /tmp
 
 public/assets/*
+
+# Ignore uploaded test images.
+/public/uploads

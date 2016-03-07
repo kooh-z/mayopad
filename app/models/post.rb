@@ -6,6 +6,13 @@ class Post < ActiveRecord::Base
   validates :content, presence: true, length: { maximum: 140 }
   validate  :picture_size
 
+  searchable do
+   text :content
+
+   integer :user_id
+   time :created_at
+ end
+
   private
 
      def picture_size

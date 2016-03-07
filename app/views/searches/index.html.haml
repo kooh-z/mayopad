@@ -1,0 +1,12 @@
+- provide(:title, "Search")
+.row
+  %aside.col-md-4
+    %section
+      %h1
+  .col-md-8
+    - if @searching_posts.any?
+      %h3
+        Posts (#{@searching_posts.count})
+      %ol
+        = render @searching_posts
+      = will_paginate @searching_posts

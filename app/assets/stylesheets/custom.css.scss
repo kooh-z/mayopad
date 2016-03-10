@@ -61,6 +61,24 @@ p {
 
 
 /* header */
+nav {
+  margin-top: -55px;
+}
+
+.search {
+  margin-left: 400px;
+
+  .text_field {
+    width: 30%;
+    padding-top: 15px;
+  }
+
+  .submit {
+    width: 10%;
+    margin-left: 230px;
+    margin-top: -42px;
+  }
+}
 
 #logo {
   float: left;

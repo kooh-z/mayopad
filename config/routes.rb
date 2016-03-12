@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'bookmarks/show'
+
   get 'searches/index'
 
   root             'static_pages#home'
@@ -13,6 +15,9 @@ Rails.application.routes.draw do
     member do
       get :following, :followers
     end
+  end
+  resources :posts do
+    get "bookmarks/toggle"
   end
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]

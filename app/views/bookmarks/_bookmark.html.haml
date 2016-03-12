@@ -1,11 +1,7 @@
-%li{id: "post-#{post.id}"}
+%li{id: "bookmark-#{bookmark.id}"}
   %p
   = link_to post_bookmarks_toggle_path(post) , id: 'bookmark-link', remote: true do
-    - unless post.user == current_user
-      - if post.user.bookmarks.exists?(post: post)
-        = fa_icon "bookmark"
-      - else
-        = fa_icon "bookmark-o"
+    = bookmark_icon(post, current_user)
   = link_to gravatar_for(post.user, size: 50), post.user
   %span.user= link_to post.user.name, post.user
   %span.content
@@ -13,5 +9,3 @@
     = image_tag post.picture.url if post.picture?
   %span.timestamp
     Posted #{time_ago_in_words(post.created_at)} ago.
-    - if current_user?(post.user)
-      = link_to "delete", post, method: :delete, data: { confirm: "You sure?" }

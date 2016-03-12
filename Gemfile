@@ -25,7 +25,9 @@ gem 'redcarpet',   '~> 2.3.0'
 gem 'rails_autolink'
 
 gem 'sunspot_rails'
-gem 'sunspot_solr' 
+gem 'sunspot_solr'
+
+gem "font-awesome-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

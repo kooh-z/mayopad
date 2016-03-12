@@ -17,4 +17,4 @@ public/assets/*
 # Ignore uploaded test images.
 /public/uploads
 
-/solr/development/data/*
+/solr/*

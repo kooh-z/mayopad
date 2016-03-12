@@ -1,3 +1,4 @@
+- provide(:title, "Search")
 .row
   %aside.col-md-4
     %section
@@ -5,8 +6,6 @@
   .col-md-8
     - if @bookmarks.any?
       %h3
-        Bookmarks (#{@bookmarks.count})
+        Posts (#{@bookmarks.count})
       %ol
         = render @bookmarks
-      = will_paginate @bookmarks
-s

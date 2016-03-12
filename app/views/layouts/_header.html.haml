@@ -1,12 +1,13 @@
 %header.navbar.navbar-fixed-top.navbar-inverse
   .container
     = link_to "mayopad", root_path, id: "logo"
-    .search
-      = form_tag searches_index_path, method: :get do
-        .text_field
-          = text_field_tag(:q)
-        .submit
-          = submit_tag("Search")
+    - if logged_in?
+      .search
+        = form_tag searches_index_path, method: :get do
+          .text_field
+            = text_field_tag(:q)
+          .submit
+            = submit_tag("Search")
     %nav
       %ul.nav.navbar-nav.navbar-right
         %li= link_to "Home", root_path

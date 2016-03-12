@@ -1,6 +1,8 @@
 class BookmarksController < ApplicationController
   def index
-    @bookmarks = Bookmark.last.post
+    @bookmarks = current_user.bookmarks.map { |bookmark|
+      Post.find(bookmark.post_id)
+    }
   end
 
   def toggle

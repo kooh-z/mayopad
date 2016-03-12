@@ -1,7 +1,8 @@
 %li{id: "post-#{post.id}"}
   %p
-  = link_to post_bookmarks_toggle_path(post) , id: 'bookmark-link', remote: true do
-    = bookmark_icon(post, current_user)
+    .bookmark_tag
+      = link_to post_bookmarks_toggle_path(post) , id: 'bookmark-link', remote: true do
+        = bookmark_icon(post, current_user)
   = link_to gravatar_for(post.user, size: 50), post.user
   %span.user= link_to post.user.name, post.user
   %span.content

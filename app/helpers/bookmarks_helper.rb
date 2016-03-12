@@ -1,10 +1,10 @@
 module BookmarksHelper
   def bookmark_icon(post, user)
-    if user
+    unless user == post.user
       if user.bookmarks.exists?(post: post)
-        '= fa_icon "bookmark"'
+        fa_icon "bookmark"
       else
-        '= fa_icon "bookmark-o"'
+        fa_icon "bookmark-o"
       end
     end
   end
